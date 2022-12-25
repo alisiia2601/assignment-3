@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Game "Hangman"</title>
+	<link rel="stylesheet" href="hangman.css">
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="hangman.js"></script>
+</head>
+
+<body onload="startGame(turnCount, answerArray)">
+	<div id="exit"><button id="exitButton" onclick="exitGame(word)">Exit</button></div>
+	<h1>Hangman</h1>
+	<div id="displayStatus"></div>
+	<div id="interactWithPlayer">
+		<div>
+			<div id='showAlreadyUsedLetters'></div>
+		</div>
+		<input id="guessOfPlayer" type="text" maxlength="1"><br>
+		<button id="confirmActions" onclick="confirmActions(word, answerArray)">Next</button>
+	</div>
+	<div>
+		<button id="restartGame" onClick="window.location.reload()">Play again</button>
+	</div>
+</body>
+
+</html>
